@@ -1,0 +1,30 @@
+body{
+    background-color: rgba(114, 107, 107, 0.8);
+    text-align: center;
+}
+button{
+    border-radius: 20px;
+}
+input{
+    border-radius: 20px;
+}
+p{
+    color:whitesmoke;
+}
+h2{
+     font-size: 40px;
+     color: whitesmoke;
+     font-weight: bold;
+ }
+h3{
+    font-size: 40px;
+    color: whitesmoke;
+    font-weight: bold;
+}
+h4{
+    color:red;
+}
+table{
+    background-color: white;
+    text-align: center;
+}
