@@ -1,4 +1,9 @@
-
+<?php
+    session_start();
+    if(!isset($_SESSION['loggedin'])){
+        header("location:index.php");
+    }
+    ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,6 +56,7 @@
     <button>Order</button>
 </form>
 <a href="viewOrders.php"><button>View Orders</button></a>
+<a href="logout.php"><button>Logout</button></a>
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery"></script>
 <script>
 

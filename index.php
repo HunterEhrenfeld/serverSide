@@ -1,13 +1,6 @@
 <?php
     require "mysqli_connect.php";
-    if($_SESSION['loggedin']==true){
-        if($_SESSION['type']==1){
-            header("location:customer.php");
-        }
-        else{
-            header("location:viewOrders.php");
-        }
-    }
+    session_start();
     if($_SERVER['REQUEST_METHOD']=="POST"){
         $username = $_REQUEST['username'];
         $password = $_REQUEST['password'];
@@ -43,6 +36,14 @@
             }
         }
     }
+if(isset($_SESSION["loggedin"]) && $_SESSION['loggedin']==true){
+    if($_SESSION['type']==1){
+        header("location:customer.php");
+    }
+    else{
+        header("location:viewOrders.php");
+    }
+}
 ?>
 <html>
 <head>

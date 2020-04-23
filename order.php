@@ -1,5 +1,9 @@
 <?php
 require "mysqli_connect.php";
+session_start();
+if(!isset($_SESSION['loggedin'])){
+    header("location:index.php");
+}
 $sql = "SELECT id, size, sauce, time, price, cooked, delivered,cooked  FROM he_order";
 $result = $dbc->query($sql);
 
@@ -110,7 +114,7 @@ else{
     It will take <?php echo $time?> minutes
 </h2>
 
-<a href="index.php"><button>Order Again</button></a>
+<a href="customer.php"><button>Order Again</button></a>
 <a href="viewOrders.php"><button>View Orders</button></a>
 </body>
 <!--    Ends the check-->
